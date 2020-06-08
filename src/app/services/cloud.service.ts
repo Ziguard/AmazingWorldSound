@@ -44,6 +44,21 @@ export class CloudService {
       url : 'https://group6-s3.s3.amazonaws.com/ouais-mais-cest-pas-toi-qui-decide-meme-fanta.mp3',
       name: 'fanta',
       artist: 'ouais-mais-cest-pas-toi-qui-decide'
+    },
+    {
+      url : 'https://group6-s3.s3.amazonaws.com/jesuispasvenupoursouffrir.mp3',
+      name: 'jesuispasvenurpoursouffrir',
+      artist: 'jesuispasvenurpoursouffrir'
+    },
+    {
+      url : 'https://group6-s3.s3.amazonaws.com/jesuispasvenupoursouffrir.mp3',
+      name: 'jesuispasvenurpoursouffrir',
+      artist: 'jesuispasvenurpoursouffrir'
+    },
+    {
+      url : 'https://group6-s3.s3.amazonaws.com/jesuispasvenupoursouffrir.mp3',
+      name: 'jesuispasvenurpoursouffrir',
+      artist: 'jesuispasvenurpoursouffrir'
     }
   ];
 

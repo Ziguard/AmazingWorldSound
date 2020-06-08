@@ -1,11 +1,10 @@
-<!-- src/app/pages/player/player.component.html -->
 <div class="container">
     <mat-toolbar color="primary" class="main-toolbar">
       <span>AmazingWorldSounds</span>
     </mat-toolbar>
     <div class="content">
         <div class="logo">
-          <mat-icon>music_note</mat-icon>
+          <img mat-card-image src="https://group6-s3.s3.amazonaws.com/DESPACIT.png">
           <div>AmazingWorldSounds</div>
       </div>
       <mat-list color="primary">
@@ -21,26 +20,28 @@
       </mat-list>
     </div>
     <div class="media-footer">
-      <mat-toolbar color="primary">
-        <mat-toolbar-row>
-           {{ state?.readableCurrentTime }}
-           <mat-slider class="time-slider" min="0" [max]="state?.duration" step="1" [value]="state?.currentTime" (input)="onSliderChangeEnd($event)" [disabled]="state?.error || currentFile.index === undefined"></mat-slider>
-           {{ state?.readableDuration }}
-        </mat-toolbar-row>
-        <mat-toolbar-row class="media-action-bar">
-          <button mat-button [disabled]="isFirstPlaying()" (click)="previous()">
-            <mat-icon mat-list-icon>skip_previous</mat-icon>
-          </button>
-          <button mat-button (click)="play()" [disabled]="state?.error" *ngIf="!state?.playing">
-            <mat-icon mat-list-icon>play_circle_filled</mat-icon>
-          </button>
-          <button mat-button (click)="pause()" *ngIf="state?.playing">
-            <mat-icon mat-list-icon>pause</mat-icon>
-          </button>
-          <button  mat-button [disabled]="isLastPlaying()" (click)="next()">
-            <mat-icon mat-list-icon>skip_next</mat-icon>
-          </button>
-        </mat-toolbar-row>
-      </mat-toolbar>
+      <footer>
+        <mat-toolbar color="primary">
+          <mat-toolbar-row>
+            {{ state?.readableCurrentTime }}
+            <mat-slider class="time-slider" min="0" [max]="state?.duration" step="1" [value]="state?.currentTime" (input)="onSliderChangeEnd($event)" [disabled]="state?.error || currentFile.index === undefined"></mat-slider>
+            {{ state?.readableDuration }}
+          </mat-toolbar-row>
+          <mat-toolbar-row class="media-action-bar">
+            <button mat-button [disabled]="isFirstPlaying()" (click)="previous()">
+              <mat-icon mat-list-icon>skip_previous</mat-icon>
+            </button>
+            <button mat-button (click)="play()" [disabled]="state?.error" *ngIf="!state?.playing">
+              <mat-icon mat-list-icon>play_circle_filled</mat-icon>
+            </button>
+            <button mat-button (click)="pause()" *ngIf="state?.playing">
+              <mat-icon mat-list-icon>pause</mat-icon>
+            </button>
+            <button  mat-button [disabled]="isLastPlaying()" (click)="next()">
+              <mat-icon mat-list-icon>skip_next</mat-icon>
+            </button>
+          </mat-toolbar-row>
+        </mat-toolbar>
+      </footer>
     </div>
 </div>
