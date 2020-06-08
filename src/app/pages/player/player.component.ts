@@ -43,6 +43,19 @@ export class PlayerComponent implements OnInit {
     this.playStream(file.url);
   }
 
+
+  pause() {
+    this.audioService.pause();
+  }
+
+  play() {
+    this.audioService.play();
+  }
+
+  stop() {
+    this.audioService.stop();
+  }
+
   next() {
     const index = this.currentFile.index + 1;
     const file = this.files[index];
@@ -63,5 +76,8 @@ export class PlayerComponent implements OnInit {
     return this.currentFile.index === this.files.length - 1;
   }
 
+  onSliderChangeEnd(change) {
+    this.audioService.seekTo(change.value);
+  }
 
 }
